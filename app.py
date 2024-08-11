@@ -17,7 +17,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # model_id = "google/gemma-2b"
 # tokenizer = AutoTokenizer.from_pretrained(model_id, token="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")
 # model = AutoModelForCausalLM.from_pretrained(model_id, token="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")
-os.environ['GOOGLE_API_KEY']='AIzaSyCkgmLEmBnQj3HqaF8M4dmVPoBdlvLte3Q'
+os.environ['GOOGLE_API_KEY']=''
 def get_pdf_text(pdf_docs):
     text=""
     for pdf in pdf_docs:
@@ -69,7 +69,7 @@ def user_input(user_question):
   st.write("Reply: ", response["output_text"])
 
 def main():
-  st.set_page_config("ChatBot with custom PDF")
+  st.set_page_config("IntelliFAQ with custom PDF")
   st.header("Chat with PDF")
 
   user_question = st.text_input("Ask a Question from the PDF Files")
